@@ -1,42 +1,18 @@
-# TransTab: A flexible transferable tabular learning framework [[arxiv]](https://arxiv.org/pdf/2205.09328.pdf)
+# Fork: TransTab: A flexible transferable tabular learning framework
 
-
-[![PyPI version](https://badge.fury.io/py/transtab.svg)](https://badge.fury.io/py/transtab)
-[![Documentation Status](https://readthedocs.org/projects/transtab/badge/?version=latest)](https://transtab.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
-![GitHub Repo stars](https://img.shields.io/github/stars/ryanwangzf/transtab)
-![GitHub Repo forks](https://img.shields.io/github/forks/ryanwangzf/transtab)
-[![Downloads](https://pepy.tech/badge/transtab)](https://pepy.tech/project/transtab)
-[![Downloads](https://pepy.tech/badge/transtab/month)](https://pepy.tech/project/transtab)
 
 
-Document is available at https://transtab.readthedocs.io/en/latest/index.html.
+## Links from Original Repository
 
-Paper is available at https://arxiv.org/pdf/2205.09328.pdf.
-
-5 min blog to understand TransTab at [realsunlab.medium.com](https://realsunlab.medium.com/transtab-learning-transferable-tabular-transformers-across-tables-1e34eec161b8)!
-
-### News!
-- [03/12/25] Version `0.0.7` with `TransTabRegressor` available for regression. Thanks @yuxinchenNU.
-
-- [05/04/23] Check the version `0.0.5` of `TransTab`!
-
-- [01/04/23] Check the version `0.0.3` of `TransTab`!
-
-- [12/03/22] Check out our [[blog]](https://realsunlab.medium.com/transtab-learning-transferable-tabular-transformers-across-tables-1e34eec161b8) for a quick understanding of TransTab!
-
-- [08/31/22] `0.0.2` Support encode tabular inputs into embeddings directly. An example is provided [here](examples/table_embedding.ipynb). Several bugs are fixed.
-
-## TODO
-
-- [x] Table embedding.
-
-- [x] Add regression support.
-
-- [ ] Add support to direct process table with missing values.
+* [Repository](https://github.com/RyanWangZf/transtab)
+* [Package Documentation](https://transtab.readthedocs.io/en/latest/index.html)
+* [Paper](https://arxiv.org/abs/2205.09328)
+* [5 min blog to understand TransTab](https://realsunlab.medium.com/transtab-learning-transferable-tabular-transformers-across-tables-1e34eec161b8)!
 
 
-### Features
+## Getting Started
+
 This repository provides the python package `transtab` for flexible tabular prediction model. The basic usage of `transtab` can be done in a couple of lines!
 
 ```python
@@ -61,26 +37,14 @@ transtab.train(model, trainset, valset, **training_arguments)
 ypred = transtab.predict(model, df_x)
 ```
 
-It's easy, isn't it?
-
-
 
 ## How to install
 
-First, download the right ``pytorch`` version following the guide on https://pytorch.org/get-started/locally/.
-
-~~Then try to install from pypi directly:~~ [Feb 2025: pypi version is not maintained, please try to install from github instead]
-
-~~or~~
+Install this fork of the transtab package directly from GitHub:
 
 ```bash
-pip install git+https://github.com/RyanWangZf/transtab.git
+pip install git+https://github.com/ccmaymay/transtab.git
 ```
-
-
-
-Please refer to for [more guidance on installation](https://transtab.readthedocs.io/en/latest/install.html) and troubleshooting.
-
 
 
 ## Transfer learning across tables
@@ -103,7 +67,6 @@ transtab.train(model, trainset, valset, **training_arguments)
 ```
 
 
-
 ## Contrastive pretraining on multiple tables
 
 We can also conduct contrastive pretraining on multiple distinct tables like
@@ -123,10 +86,9 @@ transtab.train(model, trainset, valset, collate_fn=collate_fn, **training_argume
 ```
 
 
-
 ## Citation
 
-If you find this package useful, please consider citing the following paper:
+If you find transtab package useful, please cite the original paper:
 
 ```latex
 @inproceedings{wang2022transtab,
@@ -136,3 +98,5 @@ If you find this package useful, please consider citing the following paper:
   year={2022}
 }
 ```
+
+Please also give this fork a shoutout. :)
