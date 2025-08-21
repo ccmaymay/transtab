@@ -12,18 +12,18 @@ The full code is available at `Notebook Example <https://github.com/ryanwangzf/t
 
     # load multiple datasets by passing a list of data names
     allset, trainset, valset, testset, cat_cols, num_cols, bin_cols \
-        = transtab.load_data(['credit-g','credit-approval'])
+        = transtab.load_data(['credit-g', 'credit-approval'])
 
     # build transtab classifier model
     model = transtab.build_classifier(cat_cols, num_cols, bin_cols)
 
     # specify training arguments, take validation loss for early stopping
     training_arguments = {
-        'num_epoch':5, 
-        'eval_metric':'val_loss',
-        'eval_less_is_better':True,
-        'output_dir':'./checkpoint'
-        }
+        'num_epoch': 5,
+        'eval_metric': 'val_loss',
+        'eval_less_is_better': True,
+        'output_dir': './checkpoint'
+    }
 
 
 One can take the validation loss on the validation data of the first dataset *credit-g* only:
@@ -47,7 +47,7 @@ and make predictions.
 
     x_test, y_test = testset[0]
 
-    ypred = transtab.predict(x_test)
+    ypred = transtab.predict(model, x_test)
 
 
 .. warning::
