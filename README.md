@@ -13,7 +13,13 @@
 
 ## Getting Started
 
-This repository provides the python package `transtab` for flexible tabular prediction model. The basic usage of `transtab` can be done in a couple of lines!
+Install this fork of the transtab package directly from GitHub:
+
+```bash
+pip install git+https://github.com/ccmaymay/transtab.git
+```
+
+This repository provides the python package `transtab`, which can be used as follows:
 
 ```python
 import transtab
@@ -38,9 +44,11 @@ ypred = transtab.predict(model, df_x)
 ```
 
 
-## How to install
+## Installation
 
-Install this fork of the transtab package directly from GitHub:
+This fork of transtab is tested on Python 3.10.
+
+Install the forked package directly from GitHub:
 
 ```bash
 pip install git+https://github.com/ccmaymay/transtab.git
